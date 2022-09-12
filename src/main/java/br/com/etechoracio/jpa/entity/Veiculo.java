@@ -1,4 +1,4 @@
-package entity;
+package br.com.etechoracio.jpa.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
