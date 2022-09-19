@@ -24,13 +24,17 @@ public class AgenteAutuador {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID_AGENTE_AUTUADOR")
 	private Long id;
+	
 	@Column(name = "TX_NOME")
 	private String nome;
+	
 	@Column(name = "TX_FONE")
 	private String telefone;
-	@Column(name = "TP_AGENTE")
+	
 	@Enumerated(EnumType.STRING)
+	@Column(name = "TP_AGENTE")
 	private TipoAgenteEnum tipo;
+	
 	@Column(name = "ST_AGENTE")
 	@Enumerated(EnumType.ORDINAL)
 	private StatusAgenteEnum  status;
