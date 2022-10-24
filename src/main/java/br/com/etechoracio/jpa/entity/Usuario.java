@@ -13,9 +13,10 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
-
+@Builder
 @Getter
 @Setter
 @Entity
@@ -41,4 +42,6 @@ public class Usuario {
 	joinColumns = @JoinColumn (name = "ID_USUARIO"),
 	inverseJoinColumns = @JoinColumn (name = "ID_GRUPO_USUARIO"))
 	private List<GrupoUsuario> grupos;
-}
+
+	}
+

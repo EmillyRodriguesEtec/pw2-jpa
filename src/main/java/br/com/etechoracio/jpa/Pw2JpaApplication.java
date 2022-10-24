@@ -6,7 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import br.com.etechoracio.jpa.entity.Usuario;
-import br.com.etechoracio.jpa.entity.UsuarioRepository;
+import br.com.etechoracio.jpa.repository.UsuarioRepository;
 
 @SpringBootApplication
 public class Pw2JpaApplication implements CommandLineRunner{
@@ -25,8 +25,10 @@ public class Pw2JpaApplication implements CommandLineRunner{
 		public void run(String... args) throws Exception {
 			// TODO Auto-generated method stub
 			
-				 Usuario us = new Usuario();
-					repo.save(us);
+				 Usuario us = Usuario.builder().nome("horacio.augusto")
+						 						.senha("etec123")
+						 				.build();
+						 repo.save(us);
 		}
 	}
 
